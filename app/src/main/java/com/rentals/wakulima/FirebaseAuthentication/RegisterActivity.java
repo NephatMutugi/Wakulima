@@ -22,6 +22,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.rentals.wakulima.R;
 
+import java.util.Objects;
+
 public class RegisterActivity extends AppCompatActivity {
 
     private static final String TAG = "RegisterActivity";
@@ -113,7 +115,7 @@ public class RegisterActivity extends AppCompatActivity {
                                 snackbar.show();
                             }else{
                                 Snackbar snackbar = Snackbar.make(mSnackbarLayout, "Registration failed. "
-                                        +task.getException().getMessage(),Snackbar.LENGTH_SHORT);
+                                        + Objects.requireNonNull(task.getException()).getMessage(),Snackbar.LENGTH_SHORT);
                                 snackbar.show();
                                 mProgressBar.setVisibility(View.INVISIBLE);
                             }
