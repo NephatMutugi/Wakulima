@@ -20,6 +20,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.rentals.wakulima.MainActivity;
 import com.rentals.wakulima.R;
 
 import java.util.Objects;
@@ -111,13 +112,21 @@ public class RegisterActivity extends AppCompatActivity {
                             if (task.isSuccessful()){
 
                                 mProgressBar.setVisibility(View.INVISIBLE);
-                                Snackbar snackbar = Snackbar.make(mSnackbarLayout, "Registration successful",Snackbar.LENGTH_SHORT);
+
+                                Snackbar snackbar = Snackbar.make(mSnackbarLayout, "Registration successful" ,Snackbar.LENGTH_SHORT);
                                 snackbar.show();
-                            }else{
+
+                                Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
+                                startActivity(intent);
+
+                            } else{
+
                                 Snackbar snackbar = Snackbar.make(mSnackbarLayout, "Registration failed. "
                                         + Objects.requireNonNull(task.getException()).getMessage(),Snackbar.LENGTH_SHORT);
                                 snackbar.show();
+
                                 mProgressBar.setVisibility(View.INVISIBLE);
+
                             }
                         }
                     });
