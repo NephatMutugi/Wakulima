@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Wakulima</string>
+    <string name="name">Name:</string>
+    <string name="e_mail">Email:</string>
+    <string name="password">Password:</string>
+    <string name="sign_in">Sign In</string>
+    <string name="not_registered">Not Registered? Click here</string>
+    <string name="first_name_hint">First Name</string>
+    <string name="last_name_hint">Last Name</string>
+    <string name="email">Email</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="has_account_text">Already have an account? Sign in here</string>
+</resources>
+

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "500469748429",
+    "firebase_url": "https://wakulima-ad7de.firebaseio.com",
+    "project_id": "wakulima-ad7de",
+    "storage_bucket": "wakulima-ad7de.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:500469748429:android:3de158cb0b7e45d901cf84",
+        "android_client_info": {
+          "package_name": "com.rentals.wakulima"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "500469748429-pvhdin6162555j69238nkokb0jdpd2g1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rentals.wakulima",
+            "certificate_hash": "046145add2178d9f2cf6aa586c73fe561c2e2ad2"
+          }
+        },
+        {
+          "client_id": "500469748429-v7q0eo2uhoo7tj68oebkp3pd37d88bt6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMsL6jMU9JNNw_YSRj4SugJfKFBh4rtn0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "500469748429-v7q0eo2uhoo7tj68oebkp3pd37d88bt6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
