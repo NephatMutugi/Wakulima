@@ -98,27 +98,29 @@ public class RegisterActivity extends AppCompatActivity {
                 }
                 if (!TextUtils.equals(password,confirm_pass)){
                     mConfirmPass.setError("Passwords do not match");
-                }
+                }  else {
 
-                mProgressBar.setVisibility(View.VISIBLE);
+                    mProgressBar.setVisibility(View.VISIBLE);
 
-                //Register user
-                mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()){
+                    //Register user
+                    mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()){
 
-                            mProgressBar.setVisibility(View.INVISIBLE);
-                            Snackbar snackbar = Snackbar.make(mSnackbarLayout, "Registration successful",Snackbar.LENGTH_SHORT);
-                            snackbar.show();
-                        }else{
-                            Snackbar snackbar = Snackbar.make(mSnackbarLayout, "Registration failed "
-                                    +task.getException().getMessage(),Snackbar.LENGTH_SHORT);
-                            snackbar.show();
-                            mProgressBar.setVisibility(View.INVISIBLE);
+                                mProgressBar.setVisibility(View.INVISIBLE);
+                                Snackbar snackbar = Snackbar.make(mSnackbarLayout, "Registration successful",Snackbar.LENGTH_SHORT);
+                                snackbar.show();
+                            }else{
+                                Snackbar snackbar = Snackbar.make(mSnackbarLayout, "Registration failed. "
+                                        +task.getException().getMessage(),Snackbar.LENGTH_SHORT);
+                                snackbar.show();
+                                mProgressBar.setVisibility(View.INVISIBLE);
+                            }
                         }
-                    }
-                });
+                    });
+
+                }
 
             }
         });
