@@ -15,11 +15,11 @@
       },
       "oauth_client": [
         {
-          "client_id": "500469748429-pvhdin6162555j69238nkokb0jdpd2g1.apps.googleusercontent.com",
+          "client_id": "500469748429-0dhro77dnrneqc1ofnjadktfam183q00.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.rentals.wakulima",
-            "certificate_hash": "046145add2178d9f2cf6aa586c73fe561c2e2ad2"
+            "certificate_hash": "292f55f309c9980be46ac59637434c35164eadb5"
           }
         },
         {
