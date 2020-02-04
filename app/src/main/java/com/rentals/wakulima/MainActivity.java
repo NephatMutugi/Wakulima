@@ -1,6 +1,7 @@
 package com.rentals.wakulima;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +13,9 @@ import com.rentals.wakulima.FirebaseAuthentication.LoginActivity;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static final String TAG = "MainActivity";
+    private Toolbar mToolbar;
+
     //Widgets
     private Button mLogout;
 
@@ -19,8 +23,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mToolbar = findViewById(R.id.main_toolbar);
+        setSupportActionBar(mToolbar);
 
-        mLogout = findViewById(R.id.button);
+    }
+}
+
+
+     /*   mLogout = findViewById(R.id.button);
         mLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -28,6 +38,4 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), LoginActivity.class));
                 finish();
             }
-        });
-    }
-}
+        }); */
